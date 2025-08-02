@@ -1,16 +1,16 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const authRoutes = require('./routes/authRoutes'); // No .js needed
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
-
-// TODO: import your routes and use them here
+app.use('/', authRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running...');

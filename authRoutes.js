@@ -38,5 +38,20 @@ router.post('/signin', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+router.put('/queries/:id', async (req, res) => {
+  const { response } = req.body;
+  const { id } = req.params;
+
+  try {
+    const updated = await prisma.query.update({
+      where: { id: parseInt(id) },
+      data: { response },
+    });
+    res.json(updated);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Update failed' });
+  }
+});
 
 module.exports = router;
