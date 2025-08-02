@@ -13,3 +13,10 @@ model User {
   password String
   createdAt DateTime @default(now())
 }
+model Query {
+  id        Int      @id @default(autoincrement())
+  username  String
+  question  String
+  response  String?
+  createdAt DateTime @default(now())
+}
