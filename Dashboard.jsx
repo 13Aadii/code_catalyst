@@ -99,11 +99,15 @@ const Dashboard = () => {
               </div>
               {expandedIndex === `submitted-${idx}` && (
                 <div className="faq-answer">
-                  <p><strong>📝 Description:</strong> {q.description}</p>
-                  <p><strong>🏷️ Tags:</strong> {q.tags.join(', ')}</p>
-                  <p><strong>📌 Status:</strong> {q.status}</p>
-                  <p><strong>✅ Answered:</strong> {q.answered ? 'Yes' : 'No'}</p>
-                </div>
+                <p><strong>📝 Description:</strong> {q.description}</p>
+                <p><strong>🏷️ Tags:</strong> {q.tags.join(', ')}</p>
+                <p><strong>📌 Status:</strong> {q.status}</p>
+                <p><strong>✅ Answered:</strong> {q.answered ? 'Yes' : 'No'}</p>
+                {q.answered && q.answer && (
+                  <p><strong>💡 Answer:</strong> {q.answer}</p>
+                )}
+              </div>
+              
               )}
             </div>
           ))

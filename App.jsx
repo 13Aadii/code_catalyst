@@ -4,6 +4,9 @@ import SignIn from './components/signin';
 import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import Ask from './components/Ask'; 
+import Admin from './components/admin';
+import Manage from './components/manage';
+import AdminSignup from './components/adminsignup';
 import './App.css';
 
 function App() {
@@ -15,7 +18,9 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ask" element={<Ask />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/manage" element={<Manage />} />
+          <Route path="/adminsignup" element={<AdminSignup />} />
         </Routes>
       </Router>
     </div>

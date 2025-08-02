@@ -1,0 +1,53 @@
+.admin-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+  }
+  
+  .admin-form h2 {
+    margin-bottom: 24px;
+    color: #2a5298;
+  }
+  
+  .admin-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .admin-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a5298;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .admin-form button:hover {
+    background-color: #1e3c72;
+  }
+  
+  .admin-error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  

@@ -170,3 +170,6 @@ body.dark-theme .faq-item {
     max-height: none;
   }
 }
+.faq-answer p strong {
+  color: #007bff;
+}
